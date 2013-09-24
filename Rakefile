@@ -7,19 +7,16 @@ desc "Generate a custom Vagrantfile"
 task :render do
   config = Configuration.new()
   config.hostname = ask("Droplet Hostname?") { |q|
-    q.default = "digitalocean-master"
-  }
-  config.username = ask("Droplet Username?") { |q|
-    q.default = "vagrant"
+    q.default = "vps-digitalocean"
   }
   config.private_key = ask("Droplet SSH Key?") { |q|
     q.default = "~/.ssh/id_rsa"
   }
-  config.client_id = ask("DigitalOcean Client ID?") { |q|
-    q.default = nil
+  config.client_id = ask("DigitalOcean Client ID? (required)") { |q|
+    q.validate = /(?=\s*\S).*/
   }
-  config.api_key = ask("DigitalOcean API Key?") { |q|
-    q.default = nil
+  config.api_key = ask("DigitalOcean API Key? (required)") { |q|
+    q.validate = /(?=\s*\S).*/
   }
 
   template = File.join(File.dirname(__FILE__), "Vagrantfile.erb")
