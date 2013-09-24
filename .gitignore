@@ -1,0 +1,5 @@
+.DS_Store
+.vagrant/
+files/www/*
+!files/www/.gitkeep
+Vagrantfile
