@@ -1,6 +1,13 @@
 # vps-digitalocean
 A [Vagrant][1] + [Puppet][2] configuration to create [DigitalOcean][3] droplets for PHP development.
 
+## Usage
+Run these commands and follow the instructions:
+
+    bundle install
+    rake
+    vagrant up --provider digital_ocean
+
 ## Used third-party libraries
 * PuPHPet: [https://github.com/puphpet/puphpet][4]
 
