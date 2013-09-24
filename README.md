@@ -4,7 +4,7 @@ A [Vagrant][1] + [Puppet][2] configuration to create [DigitalOcean][3] droplets 
 
 ## Usage
 
-Begin by placing your web files in the `files/www/html` directory, so that they get uploaded when the
+Begin by placing your web files in the `files/www` directory, so that they get uploaded when the
 droplet is created.
 
 Install the `gem` dependencies:
