@@ -1,14 +1,26 @@
 # vps-digitalocean
+
 A [Vagrant][1] + [Puppet][2] configuration to create [DigitalOcean][3] droplets for PHP development.
 
 ## Usage
-Run these commands and follow the instructions:
+
+Begin by placing your web files in the `files/www/` directory, so that they get uploaded when the
+droplet is created.
+
+Install the `gem` dependencies:
 
     bundle install
+
+Generate the `Vagrantfile` by following the instructions:
+
     rake
+
+Launch the DigitalOcean droplet:
+
     vagrant up --provider digital_ocean
 
 ## Used third-party libraries
+
 * PuPHPet: [https://github.com/puphpet/puphpet][4]
 
 ## License
