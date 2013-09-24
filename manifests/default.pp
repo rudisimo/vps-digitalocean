@@ -50,7 +50,7 @@ apache::module { 'rewrite': }
 apache::vhost { 'localhost':
   server_name   => 'localhost',
   serveraliases => [],
-  docroot       => '/var/www/',
+  docroot       => '/var/www/html',
   port          => '80',
   env_variables => [],
   priority      => '1',

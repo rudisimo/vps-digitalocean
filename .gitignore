@@ -1,5 +1,5 @@
 .DS_Store
 .vagrant/
-files/www/*
-!files/www/.gitkeep
+files/www/html/*
+!files/www/html/.gitkeep
 Vagrantfile
